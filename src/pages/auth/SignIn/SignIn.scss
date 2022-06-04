@@ -1,0 +1,14 @@
+.login-logo-background{
+    position: absolute;
+    display: none;
+    opacity: 10%;
+    z-index: -1;
+    width: 25vw;
+    min-width: 460px;
+    top: -75px;
+    right: -70px;
+    svg{
+        height: 100%;
+        width: 100%;
+    }
+}
