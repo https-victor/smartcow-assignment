@@ -1,3 +1,33 @@
 .sidebar {
-    width: 120px;
+    position: relative;
+    width: 102px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 10px 0;
+    border-right: 1px solid #e6e6e6;
+    .divider {
+        right: 0;
+        background-color: black;
+        top: 0;
+        display: flex;
+        margin: 40px 0;
+        position: absolute;
+        width: 1px;
+    }
+    > * {
+        width: 60px;
+    }
+    .sidebar-logo {
+        height: 60px;
+    }
+    .menu {
+        flex:1
+    }
+    .sidebar-profile {
+        width: 46px;
+        height: 46px;
+    }
 }
