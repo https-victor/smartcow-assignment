@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Container from "../../../components/Container/Container";
 import Header from "../../../components/Header/Header";
 import { appRoutes } from "../../../routes";
-interface Props {}
-export const Library = ({}: Props) => {
+
+export const Library = () => {
   return (
     <>
       <Header title="Saved Videos" />

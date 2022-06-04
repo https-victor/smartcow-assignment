@@ -54,12 +54,12 @@ const Menu = (props: Props) => {
               <MenuIcon />
             </Link>
           ) : (
-            <a
+            <div
               key={"menu-item-" + idx}
               className={classNames("menu-btn", pathnameCondition && "active")}
             >
               <MenuIcon />
-            </a>
+            </div>
           );
         })}
       </>

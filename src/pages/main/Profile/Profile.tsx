@@ -1,7 +1,6 @@
-import { onLogout } from '../../../app/features/auth/auth-slice';
-import { useDispatch } from '../../../app/hooks';
-interface Props {}
-export const Profile = ({}: Props) => {
+import { onLogout } from "../../../app/features/auth/auth-slice";
+import { useDispatch } from "../../../app/hooks";
+export const Profile = () => {
   const dispatch = useDispatch();
   return (
     <div>

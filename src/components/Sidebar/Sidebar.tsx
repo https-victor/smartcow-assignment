@@ -6,9 +6,8 @@ import IconButton from "../Menu/IconButton/IconButton";
 import { Link } from "react-router-dom";
 import { appRoutes } from "../../routes";
 import ProfileButton from "./ProfileButton/ProfileButton";
-interface Props {}
 
-export const Sidebar = ({}: Props) => {
+export const Sidebar = () => {
   return (
     <div className="sidebar">
       <Link to={appRoutes.home} className="sidebar-logo">
