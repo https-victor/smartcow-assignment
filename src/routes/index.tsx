@@ -1,7 +1,7 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 import { useSelector } from '../app/hooks';
-import { AuthLayout } from '../layouts/AuthLayout';
-import { MainLayout } from '../layouts/MainLayout';
+import { AuthLayout } from '../layouts/Auth/AuthLayout';
+import { MainLayout } from '../layouts/Main/MainLayout';
 import { SignIn, SignUp } from '../pages/auth';
 import { VideoForm, Library, Profile } from '../pages/main';
 

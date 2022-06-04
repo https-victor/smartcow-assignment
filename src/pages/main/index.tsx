@@ -1,5 +1,5 @@
-import { Library } from './Library';
-import { Profile } from './Profile';
-import { VideoForm } from './VideoForm';
+import { Library } from './Library/Library';
+import { Profile } from './Profile/Profile';
+import { VideoForm } from './VideoForm/VideoForm';
 
 export { Profile, Library, VideoForm };

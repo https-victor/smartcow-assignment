@@ -28,7 +28,11 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     // 'no-tabs': ['error', { allowIndentationTabs: true }],
-    '@typescript-eslint/no-unused-vars': 'error',
+
+    'no-empty-pattern': 1,
+    '@typescript-eslint/no-unused-vars': 1,
+    '@typescript-eslint/no-empty-interface': 1,
+
     // suppress errors for missing 'import React' in files
     'react/react-in-jsx-scope': 'off',
     // allow jsx syntax in js files (for next.js project)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-
-export const MainLayout = () => {
+interface Props {}
+export const MainLayout = ({}: Props) => {
   return (
     <>
       <div>MainLayout</div>

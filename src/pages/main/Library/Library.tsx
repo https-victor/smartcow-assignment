@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { appRoutes } from '../../routes';
-
-export const Library = () => {
+import { appRoutes } from '../../../routes';
+interface Props {}
+export const Library = ({}: Props) => {
   return (
     <div>
       Library
