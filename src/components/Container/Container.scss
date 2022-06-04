@@ -1,4 +1,10 @@
 .page-layout{
-    padding: 20px;
+    padding: 40px;
     flex: 1;
+    &.centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

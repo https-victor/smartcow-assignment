@@ -1,10 +1,15 @@
 import React from "react";
 import "./Container.scss";
+import classNames from "classnames";
 
 type Props = {};
 
-const Container = ({ children }: any) => {
-  return <div className="page-layout">{children}</div>;
+const Container = ({ centered, children }: any) => {
+  return (
+    <div className={classNames("page-layout", centered && "centered")}>
+      {children}
+    </div>
+  );
 };
 
 export default Container;
