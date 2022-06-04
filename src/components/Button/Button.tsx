@@ -1,8 +1,6 @@
 import classNames from "classnames";
 import React from "react";
 import "./Button.scss";
-type Props = {};
-export const buttonColors = {};
 const Button = ({
   title,
   variant = "text",

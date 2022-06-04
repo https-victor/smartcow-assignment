@@ -2,8 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "..";
 import "./Layout.scss";
-interface Props {}
-export const Layout = ({}: Props) => {
+
+export const Layout = () => {
   return (
     <div className="layout">
       <Sidebar />
