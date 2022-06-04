@@ -1,5 +1,5 @@
-import React from 'react';
-interface Props {}
-export const NotFound = ({}: Props) => {
+import React from "react";
+
+export const NotFound = () => {
   return <div>Error 404</div>;
 };
