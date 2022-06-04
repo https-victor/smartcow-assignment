@@ -8,26 +8,31 @@
     margin: 40px 0;
     padding: 10px 0;
     border-right: 1px solid #e6e6e6;
-    .divider {
-        right: 0;
-        background-color: black;
-        top: 0;
-        display: flex;
-        margin: 40px 0;
-        position: absolute;
-        width: 1px;
-    }
     > * {
         width: 60px;
     }
     .sidebar-logo {
         height: 60px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            height: 45px;
+            width: 45px;
+        }
+        &:hover{
+            background-color: #EBF2FF;
+        }
     }
+    
     .menu {
         flex:1
     }
-    .sidebar-profile {
+    .profile-picture {
         width: 46px;
         height: 46px;
+        background-color: crimson;
+        border-radius: 46px;
     }
 }
