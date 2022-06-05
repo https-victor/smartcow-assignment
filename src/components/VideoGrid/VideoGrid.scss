@@ -1,0 +1,44 @@
+.video-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fit,245px);
+    .video-card{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        background-color: #F4F4F4;
+        border-radius: 6px;
+        box-shadow: 0px 3px 3px -2px #00000020, 0px 3px 4px 0px #00000014, 0px 1px 8px 0px #00000012;
+        transition: box-shadow ease 0.3s;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 3px 5px -1px #00000020, 0px 6px 10px 0px #00000014, 0px 1px 18px 0px #00000012;
+        }
+        .video-title h3{
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .video-tags{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            .video-tag{
+                text-align: center;
+                padding: 3px 13px;
+                font-size: 12px;
+                border-radius: 6px;
+                color: #999999;
+                border: 1px solid #999999;
+            }
+        }
+        .video-thumbnail{
+            border-radius: 6px;
+            flex: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

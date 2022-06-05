@@ -1,38 +1,21 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { v4 as uuidv4 } from 'uuid';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
+import { Actor, Background, BackgroundType, Voice } from "./preset-slice";
 
 export enum Alignment {
-  Left = 'Left',
-  Center = 'Center',
-  Right = 'Right'
+  Left = "Left",
+  Center = "Center",
+  Right = "Right",
 }
-
-// interface Actor {
-//   id: number;
-//   name: string;
-//   image: string;
-// }
-
-// interface Voice {
-//   id: number;
-//   title: string;
-//   src: string;
-// }
-
-// interface Background {
-//   id: number;
-//   title: string;
-//   image: string;
-// }
 
 interface VideoPayload {
   title: string;
   description: string;
   tags: string[];
-  actor: string;
-  voice: string;
+  actor: Actor;
+  voice: Voice;
   alignment: Alignment;
-  background: string;
+  background: Background;
 }
 
 interface Video extends VideoPayload {
@@ -44,11 +27,35 @@ interface LibraryState {
 }
 
 const initialState: LibraryState = {
-  videos: []
+  videos: [
+    {
+      id: uuidv4(),
+      alignment: Alignment.Center,
+      title: "Saying Hi to users!",
+      description: "Saying hi to users!",
+      tags: ["Email", "Marketing", "Greeting"],
+      actor: {
+        id: uuidv4(),
+        image: "https://i.imgur.com/izBoUzB.png",
+        name: "Anna",
+      },
+      voice: {
+        id: uuidv4(),
+        src: "https://audio-samples.github.io/samples/mp3/voxceleb2_unconditional/sample-1.mp3",
+        title: "Asian",
+      },
+      background: {
+        id: uuidv4(),
+        image: "https://i.imgur.com/3H2aXWj.png",
+        title: "Office",
+        type: BackgroundType.Image,
+      },
+    },
+  ],
 };
 
 const librarySlice = createSlice({
-  name: 'library',
+  name: "library",
   initialState,
   reducers: {
     onAddVideo(state, action: PayloadAction<VideoPayload>) {
@@ -60,9 +67,11 @@ const librarySlice = createSlice({
       );
     },
     onRemoveVideo(state, action: PayloadAction<string>) {
-      state.videos = state.videos.filter((video) => video.id !== action.payload);
-    }
-  }
+      state.videos = state.videos.filter(
+        (video) => video.id !== action.payload
+      );
+    },
+  },
 });
 
 export const { onAddVideo, onRemoveVideo } = librarySlice.actions;

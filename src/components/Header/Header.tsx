@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import classNames from "classnames";
+import Button from "../Button/Button";
 type HeaderProps = {
   title: string;
   divider?: boolean;
@@ -25,8 +26,12 @@ const Header = ({
       </div>
       <div className="actions-wrapper">
         {areThereActions &&
-          actions.map((action) => {
-            return <button key={action.title}>{action.title}</button>;
+          actions.map(({ title, ...restProps }, idx) => {
+            return (
+              <Button key={title + idx} {...restProps}>
+                {title}
+              </Button>
+            );
           })}
       </div>
     </div>

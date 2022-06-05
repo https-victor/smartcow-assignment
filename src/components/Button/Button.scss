@@ -6,8 +6,14 @@
     font-size: 14px;
     border: none;
     padding: 0;
+    transition: padding ease-in 0.1s, margin ease-in 0.1s;
     &.padding{
+        margin: 1px 3px;
         padding: 6px 20px;
+    }
+    &.padding:hover{
+        margin: 0;
+        padding: 7px 23px;
     }
     &.text{
         background-color: transparent;
