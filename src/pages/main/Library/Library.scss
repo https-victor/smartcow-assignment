@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000000;
     bottom: 0;
     right: 0;
     background-color: #00000065;
@@ -10,7 +11,7 @@
     align-items: center;
     .alert {
         box-shadow: 0px 3px 5px -1px #00000020, 0px 6px 10px 0px #00000014, 0px 1px 18px 0px #00000012;
-        min-width: 400px;
+        min-width: 250px;
         width: 40%;
         padding: 1rem;
         max-width: 800px;
