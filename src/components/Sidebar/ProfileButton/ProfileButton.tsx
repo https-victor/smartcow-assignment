@@ -10,7 +10,7 @@ type Props = {};
 const ProfileButton = (props: Props) => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   return isLoggedIn ? (
-    <Link to={appRoutes.profile}>
+    <Link to={appRoutes.profile} className="profile-btn">
       <IconButton className="profile-picture" icon={ProfilePicture} />
     </Link>
   ) : null;

@@ -5,12 +5,12 @@ import { SignIn, SignUp } from "../pages/auth";
 import { VideoForm, Library, Profile } from "../pages/main";
 
 export const appRoutes = {
-  createVideo: "/create-video",
+  video: "/video/:id",
+  newVideo: "/video",
   signUp: "/signup",
   signIn: "/",
   home: "/",
   profile: "/profile",
-  editVideo: "/edit-video",
 };
 
 export const Router = () => {
@@ -22,8 +22,8 @@ export const Router = () => {
   ];
   const mainRoutes = [
     { path: appRoutes.home, element: <Library /> },
-    { path: appRoutes.createVideo, element: <VideoForm mode="create" /> },
-    { path: appRoutes.editVideo, element: <VideoForm mode="edit" /> },
+    { path: "/video", element: <VideoForm /> },
+    { path: "/video/:id", element: <VideoForm /> },
     { path: appRoutes.profile, element: <Profile /> },
     { path: "*", element: <Navigate to="/" /> },
   ];

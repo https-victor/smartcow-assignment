@@ -6,14 +6,17 @@
     font-size: 14px;
     border: none;
     padding: 0;
+    transition: padding ease-in 0.1s, margin ease-in 0.1s;
     &.padding{
+        margin: 1px 3px;
         padding: 6px 20px;
+    }
+    &.padding:hover{
+        margin: 0;
+        padding: 7px 23px;
     }
     &.text{
         background-color: transparent;
-        &:hover{
-            text-decoration: underline;
-        }
         &.primary{
             color: #3860AD;
             &:hover{
@@ -27,9 +30,9 @@
             }
         }
         &.neutral{
-            color: #F1F1F1;
+            color: #999999;
             &:hover{
-                color:#d6d6d6;
+                color:#acacac;
             }
         }
         &.error{
@@ -51,11 +54,11 @@
         }
         &.neutral{
             
-            background-color: #F1F1F1;
+            background-color: #d8d8d8;
             color: #999999;
             &:hover{
-                outline: 2px solid #F1F1F150;
-                background-color: #d6d6d6;
+                outline: 2px solid #d8d8d850;
+                background-color: #cfcfcf;
             }
         }
         &.error{
@@ -69,10 +72,15 @@
         }
     }
     &.outlined{
-        &.primary{
-            border: none;
+        border: none;
+        &.neutral{
             background-color: #F1F1F1;
             color: #999999;
+        }
+        &.primary{
+            background-color: #EBF2FF;
+            color: #3860AD;
+            border: 1px solid #3860AD;
             &:hover{
                 color: #3860AD;
                 background-color: #EBF2FF;

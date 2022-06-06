@@ -1,0 +1,41 @@
+.details-form{
+    min-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 41px;
+    .input {
+        border: none;
+        max-width: 400px;
+        border-radius: 0;
+        border-bottom: 2px solid #B3CAF6;
+        color: #3860AD;
+        outline: none;
+        background: transparent;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    #description{
+        color: #666666;
+        font-weight: normal;
+        max-height: 80px;
+        max-width: 600px;
+        width: 100%;
+        font-size: 15px;
+        flex: 2;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #00000010;
+        outline: none;
+        resize: none;
+    }
+    @media (max-width: 860px) {
+        #description{
+            max-width: 410px;
+        }
+        align-items: center;
+        justify-content: center;
+    }
+}

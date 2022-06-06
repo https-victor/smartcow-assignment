@@ -4,7 +4,7 @@ import { ReactComponent as VideoFormIcon } from "../../assets/svg/videoForm.svg"
 import { ReactComponent as LibraryIcon } from "../../assets/svg/library.svg";
 import IconButton from "./IconButton/IconButton";
 import { appRoutes } from "../../routes";
-import { Link, useLocation } from "react-router-dom";
+import { Link, matchRoutes, useLocation } from "react-router-dom";
 import { useSelector } from "../../app/hooks";
 import classNames from "classnames";
 type Props = {};
@@ -21,12 +21,15 @@ interface MenuItem {
 
 const Menu = (props: Props) => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const isEditVideoRoute = Boolean(
+    matchRoutes([{ path: appRoutes.video }], location)
+  );
   const MenuItems = () => {
     const menuItems: MenuItem[] = [
       {
         icon: VideoFormIcon,
-        to: [appRoutes.createVideo, appRoutes.editVideo],
+        to: [appRoutes.newVideo, appRoutes.video],
       },
       {
         icon: LibraryIcon,
@@ -36,16 +39,22 @@ const Menu = (props: Props) => {
     return isLoggedIn ? (
       <>
         {menuItems.map(({ icon, to, onClick }: MenuItem, idx) => {
+          const checkRoutes = (routes: any) =>
+            Boolean(
+              routes.filter((route: any) =>
+                Boolean(matchRoutes([{ path: route }], location))
+              ).length > 0
+            );
           const pathnameCondition =
-            typeof to === "string" ? pathname === to : to?.includes(pathname);
+            typeof to === "string" ? location.pathname === to : checkRoutes(to);
           const MenuIcon = () => (
             <IconButton
               onClick={onClick}
               icon={icon}
-              active={pathnameCondition}
+              active={pathnameCondition || isEditVideoRoute}
             />
           );
-          return to ? (
+          return to && !pathnameCondition ? (
             <Link
               key={to[0]}
               to={to[0]}

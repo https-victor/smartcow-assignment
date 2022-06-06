@@ -2,9 +2,15 @@ import React from "react";
 import "./Container.scss";
 import classNames from "classnames";
 
-const Container = ({ centered, children }: any) => {
+const Container = ({ centered, overflow = false, children }: any) => {
   return (
-    <div className={classNames("page-layout", centered && "centered")}>
+    <div
+      className={classNames(
+        "page-layout",
+        centered && "centered",
+        overflow && "overflow"
+      )}
+    >
       {children}
     </div>
   );
