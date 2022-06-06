@@ -1,0 +1,17 @@
+.voices{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+    .voice-wrapper{
+        height: 70px;
+        border-radius: 6px;
+        background-color: #F1F1F1;
+        border: 1px solid transparent;
+        &.selected{
+            outline: 3px solid #5C90F370;
+            border: 1px solid #3860AD;
+            background-color: #EBF2FF;
+        }
+    }
+}
