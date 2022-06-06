@@ -17,9 +17,6 @@
     }
     &.text{
         background-color: transparent;
-        &:hover{
-            text-decoration: underline;
-        }
         &.primary{
             color: #3860AD;
             &:hover{
@@ -33,9 +30,9 @@
             }
         }
         &.neutral{
-            color: #F1F1F1;
+            color: #d8d8d8;
             &:hover{
-                color:#d6d6d6;
+                color:#cfcfcf;
             }
         }
         &.error{
@@ -57,11 +54,11 @@
         }
         &.neutral{
             
-            background-color: #F1F1F1;
+            background-color: #d8d8d8;
             color: #999999;
             &:hover{
-                outline: 2px solid #F1F1F150;
-                background-color: #d6d6d6;
+                outline: 2px solid #d8d8d850;
+                background-color: #cfcfcf;
             }
         }
         &.error{
@@ -77,7 +74,7 @@
     &.outlined{
         &.primary{
             border: none;
-            background-color: #F1F1F1;
+            background-color: #d8d8d8;
             color: #999999;
             &:hover{
                 color: #3860AD;

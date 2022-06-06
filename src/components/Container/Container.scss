@@ -1,5 +1,6 @@
 .page-layout{
     padding: 40px;
+    overflow: scroll;
     flex: 1;
     &.centered {
         display: flex;

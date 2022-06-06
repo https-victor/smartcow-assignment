@@ -1,0 +1,97 @@
+.video-card{
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    padding: 5px;
+    background-color: #F4F4F4;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px -2px #00000020, 0px 3px 4px 0px #00000014, 0px 1px 8px 0px #00000012;
+    transition: box-shadow ease 0.3s;
+    &:hover{
+        box-shadow: 0px 3px 5px -1px #00000020, 0px 6px 10px 0px #00000014, 0px 1px 18px 0px #00000012;
+    }
+    .video-title h3{
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .video-tags{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        .video-tag{
+            text-align: center;
+            padding: 3px 13px;
+            font-size: 12px;
+            border-radius: 6px;
+            color: #999999;
+            border: 1px solid #999999;
+        }
+    }
+    .video-thumbnail{
+        position: relative;
+        border-radius: 6px;
+        flex: 1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        .ellipsis-options{
+            cursor: pointer;
+            position: absolute;
+            margin-right: 4px;
+            padding: 4px 6px;
+            right: 0;
+            svg{
+                width: 20px;
+                height: 10px;
+                margin-right: 2px;
+                margin-bottom: 2px;
+                transition: all ease 0.2s;
+            }
+            &:hover svg, &.visible svg{
+                width: 24px;
+                height: 14px;
+                margin: 0;
+            }
+            .dropdown{
+                position: absolute;
+                right: 0;
+                box-shadow: 0px 3px 5px -1px #00000020, 0px 6px 10px 0px #00000014, 0px 1px 18px 0px #00000012;
+                border-radius: 6px;
+                width: max-content;
+                display: flex;
+                flex-direction: column;
+                 :first-child{
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                }
+                  :last-child{
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+                > .dropdown-option{
+                    p{
+                        margin: 0;
+                    }
+                    &.error {
+                        color: white;
+                        background-color: #EE6363;
+                        &:hover{
+                            background-color: #f57676;
+                        }
+                    }
+                    text-decoration: none;
+                    color: #222222;
+                    padding: 5px 10px;
+                    background: white;
+                }
+                .dropdown-option:hover{
+                    background: #b9b9b9;
+
+                }
+            }
+        }
+    }
+}
