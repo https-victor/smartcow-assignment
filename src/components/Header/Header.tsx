@@ -2,16 +2,20 @@ import React from "react";
 import "./Header.scss";
 import classNames from "classnames";
 import Button from "../Button/Button";
+import { ReactComponent as Expand } from "../../assets/svg/expand.svg";
+
 type HeaderProps = {
   title: string;
+  modal?: boolean;
   divider?: boolean;
   actions?: any[];
-  titleAction?: any;
+  titleAction?: () => void;
 };
 
 const Header = ({
   title,
   divider = true,
+  modal = false,
   actions,
   titleAction,
 }: HeaderProps) => {
@@ -20,9 +24,13 @@ const Header = ({
     <div
       className={classNames("app-header", divider && "app-header-with-divider")}
     >
-      <div className="title-wrapper">
+      <div className={classNames("title-wrapper", modal && "modal-open")}>
         <h2>{title}</h2>
-        {titleAction && <>Expand</>}
+        {titleAction && (
+          <div onClick={titleAction} className="expand">
+            <Expand />
+          </div>
+        )}
       </div>
       <div className="actions-wrapper">
         {areThereActions &&

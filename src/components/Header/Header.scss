@@ -12,12 +12,41 @@
         margin-top: 15px;
     }
     .title-wrapper{
+        &.modal-open{
+            opacity: 0;
+        }
         display: flex;
-        h1{
+        
+        align-items: center;
+        gap: 10px;
+        h2{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 400px;
+            overflow: hidden;
             margin: 0;
+        }
+        .expand{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            svg{
+                transition: all 0.1s ease;
+            }
+            &:hover svg{
+                stroke: blue;
+                margin-top: 5px;
+                width: 12px;
+                height: 8px;
+            }
         }
     }
     .actions-wrapper {
         padding: 0 20px;
+        display: flex;
+        gap: 1rem;
     }
 }

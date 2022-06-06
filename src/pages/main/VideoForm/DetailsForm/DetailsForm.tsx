@@ -1,31 +1,52 @@
 import React from "react";
 import Button from "../../../../components/Button/Button";
 import Input from "../../../../components/Input/Input";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import "./DetailsForm.scss";
 
-const DetailsForm = ({ form }: any) => {
+const videoDetailsFormValidation = yup.object({
+  title: yup.string().required("Title is required"),
+  description: yup.string(),
+  tags: yup.array().of(yup.string()),
+});
+
+const DetailsForm = ({ initialValues, onSubmit }: any) => {
+  const formDetails = useFormik({
+    initialValues,
+    validationSchema: videoDetailsFormValidation,
+    onSubmit,
+  });
   return (
-    <form className="login-form" onSubmit={form.handleSubmit}>
-      <Input
-        label="Title"
-        type="text"
-        name="title"
-        placeholder="Saying Hi to my customers"
-        onChange={form.handleChange}
-        onBlur={form.handleBlur}
-        value={form.values.title}
-      />
-      {form.errors.title && form.touched.title && form.errors.title}
-      <Input
-        label="Description"
-        type="text"
-        name="description"
-        onChange={form.handleChange}
-        onBlur={form.handleBlur}
-        value={form.values.description}
-      />
-      <Button variant="contained" type="submit" disabled={form.isSubmitting}>
-        Save
-      </Button>
+    <form className="details-form" onSubmit={formDetails.handleSubmit}>
+      <>
+        <Input
+          type="text"
+          name="title"
+          placeholder="Saying Hi to my customers"
+          onChange={formDetails.handleChange}
+          onBlur={formDetails.handleBlur}
+          value={formDetails.values.title}
+        />
+        {formDetails.errors.title &&
+          formDetails.touched.title &&
+          formDetails.errors.title}
+        <textarea
+          id="description"
+          name="description"
+          className="input"
+          onChange={formDetails.handleChange}
+          onBlur={formDetails.handleBlur}
+          value={formDetails.values.description}
+        />
+        <Button
+          variant="contained"
+          type="submit"
+          disabled={formDetails.isSubmitting}
+        >
+          Save
+        </Button>
+      </>
     </form>
   );
 };

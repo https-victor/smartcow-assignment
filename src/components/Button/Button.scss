@@ -30,9 +30,9 @@
             }
         }
         &.neutral{
-            color: #d8d8d8;
+            color: #999999;
             &:hover{
-                color:#cfcfcf;
+                color:#acacac;
             }
         }
         &.error{
@@ -72,10 +72,15 @@
         }
     }
     &.outlined{
-        &.primary{
-            border: none;
-            background-color: #d8d8d8;
+        border: none;
+        &.neutral{
+            background-color: #F1F1F1;
             color: #999999;
+        }
+        &.primary{
+            background-color: #EBF2FF;
+            color: #3860AD;
+            border: 1px solid #3860AD;
             &:hover{
                 color: #3860AD;
                 background-color: #EBF2FF;
