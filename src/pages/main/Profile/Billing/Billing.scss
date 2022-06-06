@@ -1,0 +1,39 @@
+.table-wrapper{
+    display: flex;
+    flex-direction: column;
+    .table-header{
+        padding: 0.5rem 0;
+        color: #909090;
+        display: flex;
+        >:first-child{
+            flex:2;
+        }
+        > * {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            gap: 1rem;
+            > svg {
+                height: 12px;
+            }
+        }
+    }
+    .billings-container{
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        .billing-wrapper{
+            display: flex;
+            >:first-child{
+                flex:2;
+            }
+            > * {
+                display: flex;
+                flex: 1;
+                > svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

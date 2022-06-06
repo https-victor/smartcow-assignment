@@ -31,4 +31,11 @@
         outline: none;
         resize: none;
     }
+    @media (max-width: 860px) {
+        #description{
+            max-width: 410px;
+        }
+        align-items: center;
+        justify-content: center;
+    }
 }

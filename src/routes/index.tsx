@@ -25,7 +25,7 @@ export const Router = () => {
     { path: "/video", element: <VideoForm /> },
     { path: "/video/:id", element: <VideoForm /> },
     { path: appRoutes.profile, element: <Profile /> },
-    // { path: "*", element: <Navigate to="/" /> },
+    { path: "*", element: <Navigate to="/" /> },
   ];
 
   const router = useRoutes([

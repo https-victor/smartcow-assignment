@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useCallback, useContext, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { onSelectVideoToRemoval } from "../../../app/features/library/library-slice";
 import { useDispatch } from "../../../app/hooks";

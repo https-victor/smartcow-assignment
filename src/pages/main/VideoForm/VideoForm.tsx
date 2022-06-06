@@ -1,13 +1,7 @@
-import {
-  matchRoutes,
-  useLocation,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Container from "../../../components/Container/Container";
 import Header from "../../../components/Header/Header";
 import { appRoutes } from "../../../routes";
-import * as yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "../../../app/hooks";
 import {
@@ -15,7 +9,6 @@ import {
   onAddVideo,
   onEditVideo,
 } from "../../../app/features/library/library-slice";
-import Input from "../../../components/Input/Input";
 import Button from "../../../components/Button/Button";
 import DetailsForm from "./DetailsForm/DetailsForm";
 import "./VideoForm.scss";
@@ -30,7 +23,6 @@ export const VideoForm = () => {
   const videos = useSelector((state) => state.library.videos);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
   const params = useParams();
   const isEditVideoRoute = Boolean(params.id);
   const [tabs, setTabs] = useState(0);
@@ -83,10 +75,6 @@ export const VideoForm = () => {
   const chosenActor =
     actors.find((actor) => actor.id === videoForm.values.actor)?.image ||
     "https://i.imgur.com/izBoUzB.png";
-  const chosenBackground =
-    backgrounds.find(
-      (background) => background.id === videoForm.values.background
-    )?.image || "https://i.imgur.com/3H2aXWj.png";
   const TabContainer = () => {
     switch (tabs) {
       case 1:

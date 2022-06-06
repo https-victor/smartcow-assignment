@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "../../app/hooks";
 import VideoCard from "./VideoCard/VideoCard";
 import "./VideoGrid.scss";

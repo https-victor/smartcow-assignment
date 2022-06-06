@@ -2,6 +2,12 @@
     padding: 30px;
     height: calc(100% - 164px);
     flex: 1;
+    @media (max-width: 860px) {
+        overflow: overlay;
+    }
+    &.overflow {
+        overflow: overlay;
+    }
     &.centered {
         display: flex;
         flex-direction: column;

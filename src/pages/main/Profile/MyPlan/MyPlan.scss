@@ -1,0 +1,43 @@
+.plans-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+    .plan{
+        box-shadow: 0px 3px 5px -1px #00000020, 0px 6px 10px 0px #00000014, 0px 1px 18px 0px #00000012;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        padding: 25px;
+        transition: 0.3s all ease;
+        margin-top: 20px;
+        .button{color: #3860AD;}
+        .button-plan{
+            font-size: 1rem;
+            text-align: center;
+        }
+        &.active{
+            margin-top: 0;
+            color: white;
+            .button-plan{
+                color: #1C7714;
+                font-size: 20px;
+            }
+            background-color: #46B13D;
+        }
+        .title {
+            font-size: 22px;
+        }
+        .vantages-list{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            .vantage{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+    }
+}
