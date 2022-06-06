@@ -53,6 +53,7 @@
     }
 }
 .profile-pic-modal{
+    z-index: 1000000;
     position: fixed;
     top: 0;
     left: 0;
@@ -73,5 +74,8 @@
         
         flex-direction: column;
         margin-top: 41px;
+    }
+    @media (max-width: 860px) {
+        padding-left: 0;
     }
 }
