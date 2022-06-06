@@ -67,10 +67,12 @@
         }
     }
     @media (max-width: 860px) {
+        margin-bottom: 50px;
         overflow: overlay;
         height: auto;
         flex-direction: column;
         .preview-card{
+            padding: 10px;
             .transcript-wrapper{
                 textarea{
                     margin: 8px;
@@ -79,7 +81,6 @@
             .preview-video{
                 height: 200px;
                 flex: initial;
-                aspect-ratio: 16/9;
             }
         }
         .video-options{

@@ -48,6 +48,9 @@
             }
         }
     }
+    @media (max-width: 860px) {
+        margin-bottom: 50px;
+    }
 }
 .profile-pic-modal{
     position: fixed;

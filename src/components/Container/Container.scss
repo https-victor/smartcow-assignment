@@ -3,6 +3,7 @@
     height: calc(100% - 164px);
     flex: 1;
     @media (max-width: 860px) {
+        padding: 20px;
         overflow: overlay;
     }
     &.overflow {
