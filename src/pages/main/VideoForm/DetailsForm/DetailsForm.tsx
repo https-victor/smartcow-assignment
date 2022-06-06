@@ -38,6 +38,7 @@ const DetailsForm = ({ initialValues, onSubmit }: any) => {
           id="description"
           name="description"
           className="input"
+          placeholder="Insert a description"
           onChange={formDetails.handleChange}
           onBlur={formDetails.handleBlur}
           value={formDetails.values.description}
