@@ -93,7 +93,9 @@ const MyPlan = (props: Props) => {
                 );
               })}
             </ul>
-            <p className="cost">${plan.value}</p>
+            <p className="cost">
+              $<span>{plan.value}</span>
+            </p>
             <ButtonTitle />
           </div>
         );
