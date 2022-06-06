@@ -1,5 +1,18 @@
 
 .profile-details{
+    @media (max-width: 860px) {
+        form{
+            display: flex;
+            flex-direction: column-reverse;
+            .profile-form{
+                margin-top: 15px;
+                margin-bottom: 0;
+            }
+            .button{
+                margin: 15px 0;
+            }
+        }
+    }
     .profile-form{
         margin-top: 40px;
         display: grid;
@@ -7,10 +20,11 @@
         row-gap: 20px;
         margin-bottom: 20px;
         grid-template-columns: 1fr 1fr;
+        
         @media (max-width: 650px) {
             grid-template-columns: 1fr;
         }
-    }   
+    }
     .profile-picture{
         display: flex;
 
@@ -51,6 +65,7 @@
     @media (max-width: 860px) {
         margin-bottom: 50px;
     }
+    
 }
 .profile-pic-modal{
     z-index: 1000000;
