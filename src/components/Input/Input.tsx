@@ -3,7 +3,7 @@ import React from "react";
 import Button from "../Button/Button";
 import "./Input.scss";
 
-const Input = ({ label, action, ...restProps }: any) => {
+const Input = ({ label, action, error, ...restProps }: any) => {
   return label || action ? (
     <div className="input-wrapper">
       <div
@@ -26,6 +26,7 @@ const Input = ({ label, action, ...restProps }: any) => {
         )}
       </div>
       <input className={classNames("input")} {...restProps} />
+      <div className="input-error">{error && error}</div>
     </div>
   ) : (
     <input className={classNames("input")} {...restProps} />

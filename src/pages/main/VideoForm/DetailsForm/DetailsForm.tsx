@@ -27,10 +27,13 @@ const DetailsForm = ({ initialValues, onSubmit }: any) => {
           onChange={formDetails.handleChange}
           onBlur={formDetails.handleBlur}
           value={formDetails.values.title}
+          error={
+            formDetails.errors.title &&
+            formDetails.touched.title &&
+            formDetails.errors.title
+          }
         />
-        {formDetails.errors.title &&
-          formDetails.touched.title &&
-          formDetails.errors.title}
+
         <textarea
           id="description"
           name="description"

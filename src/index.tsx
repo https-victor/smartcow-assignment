@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import "./normalize.scss";
+import "./assets/fonts/Poppins/poppins.css";
 import "./index.scss";
 import App from "./App";
 import { store } from "./app/store";

@@ -29,10 +29,19 @@
     .menu {
         flex:1
     }
-    .profile-picture {
-        width: 46px;
-        height: 46px;
-        background-color: crimson;
-        border-radius: 46px;
+    .profile-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .profile-picture {
+            width: 46px;
+            height: 46px;
+            background-color: crimson;
+            border-radius: 46px;
+            
+        }
+    }
+    @media (max-width: 860px) {
+        padding-bottom: 20px;
     }
 }

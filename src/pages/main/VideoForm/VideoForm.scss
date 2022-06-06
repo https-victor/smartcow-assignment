@@ -1,6 +1,7 @@
 .video-form{
     display: flex;
     height: 100%;
+   
     .preview-card{
         padding: 20px;
         background-color: #F4F4F4;
@@ -65,6 +66,37 @@
             height: 100%;
         }
     }
+    @media (max-width: 860px) {
+        overflow: overlay;
+        height: auto;
+        flex-direction: column;
+        .preview-card{
+            .transcript-wrapper{
+                textarea{
+                    margin: 8px;
+                }
+            }
+            .preview-video{
+                height: 200px;
+                flex: initial;
+                aspect-ratio: 16/9;
+            }
+        }
+        .video-options{
+            margin-bottom: 30px;
+            overflow: initial;
+        }
+        .preview-card, .video-options{
+            width: auto;
+        }
+        .option-wrapper{
+            overflow: initial;
+        }
+        .actors{
+            grid-template-columns: 1fr;
+        }
+        
+    }
 }
 .header-modal{
     position: fixed;
@@ -75,5 +107,7 @@
     background-color: #FFFFFF99;
     display: flex;
     padding-left: 142px;
-    
+    @media (max-width: 860px) {
+        padding: 20px;
+    }
 }

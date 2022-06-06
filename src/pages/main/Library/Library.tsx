@@ -1,5 +1,4 @@
-import React, { createContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   onCloseModal,
   onRemoveVideo,

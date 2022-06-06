@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
-import { Actor, Background, BackgroundType, Voice } from "./preset-slice";
+import { Actor, Background, Voice } from "./preset-slice";
 
 export enum Alignment {
   Left = "Left",

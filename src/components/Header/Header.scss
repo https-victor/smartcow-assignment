@@ -20,6 +20,7 @@
         align-items: center;
         gap: 10px;
         h2{
+            font-size: calc(20px + 4 * ((100vw - 320px) / 680));
             white-space: nowrap;
             text-overflow: ellipsis;
             max-width: 400px;
@@ -48,5 +49,20 @@
         padding: 0 20px;
         display: flex;
         gap: 1rem;
+    }
+    @media (max-width: 860px) {
+        .actions-wrapper{
+            position: fixed;
+            >:first-child{margin-left: 102px;}
+            z-index: 1000;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 3px 5px -1px #00000020, 0px 6px 10px 0px #00000014, 0px 1px 18px 0px #00000012;
+        }
     }
 }
